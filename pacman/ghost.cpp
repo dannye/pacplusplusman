@@ -47,11 +47,11 @@ void ghost::move(int playery, int playerx)
             else
             {
                 mode = 'c';
-                modeold = 'c';
+                modeold = 'e';
                 if(color == BLUE)
                 {
                     mode = 'r';
-                    modeold = 'r';
+                    modeold = 'e';
                 }
                 dirold = 'w';
                 wait = 0;
@@ -84,6 +84,8 @@ void ghost::move(int playery, int playerx)
         case 's':
         {
             getopposite();
+            if(modeold == 'e')
+                modeold = mode;
             if(mode != modeold)
             {
                 dir = diropp;
@@ -101,6 +103,8 @@ void ghost::move(int playery, int playerx)
         case 'c':
         {
             getopposite();
+            if(modeold == 'e')
+                modeold = mode;
             if(mode != modeold)
             {
                 dir = diropp;
@@ -124,6 +128,8 @@ void ghost::move(int playery, int playerx)
         case 'r':
         {
             getopposite();
+            if(modeold == 'e')
+                modeold = mode;
             if(mode != modeold)
             {
                 dir = diropp;
