@@ -10,11 +10,5 @@ int pelletcolor = WHITE;
 int ghostmode = MODEMAX;
 
 pacman player;
-ghost blinky;
-ghost pinky;
-ghost inky;
-ghost clyde;
-pellet one;
-pellet two;
-pellet three;
-pellet four;
+ghost ghosts[4];
+pellet pellets[4];

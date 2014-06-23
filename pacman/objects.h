@@ -6,13 +6,7 @@
 #include "pellet.h"
 
 extern pacman player;
-extern ghost blinky;
-extern ghost pinky;
-extern ghost inky;
-extern ghost clyde;
-extern pellet one;
-extern pellet two;
-extern pellet three;
-extern pellet four;
+extern ghost ghosts[4];
+extern pellet pellets[4];
 
 #endif

@@ -46,13 +46,11 @@ void ghost::move(int playery, int playerx)
             }
             else
             {
-                mode = 'c';
-                modeold = 'e';
+                modeold = mode;
                 if(color == BLUE)
-                {
                     mode = 'r';
-                    modeold = 'e';
-                }
+                else
+                    mode = 'c';
                 dirold = 'w';
                 wait = 0;
             }

@@ -68,41 +68,41 @@ void loadlevel()
             }
             case 'B':
             {
-                blinky.yinit = y;
-                blinky.xinit = x;
-                blinky.colorinit = RED;
-                blinky.diropp = 's';
-                level[y][x] = ' ';
-                break;
-            }
-            case 'I':
-            {
-                inky.yinit = y;
-                inky.xinit = x;
-                inky.colorinit = CYAN;
+                ghosts[0].yinit = y;
+                ghosts[0].xinit = x;
+                ghosts[0].colorinit = RED;
+                ghosts[0].diropp = 's';
                 level[y][x] = ' ';
                 break;
             }
             case 'P':
             {
-                pinky.yinit = y;
-                pinky.xinit = x;
-                pinky.colorinit = MAGENTA;
+                ghosts[1].yinit = y;
+                ghosts[1].xinit = x;
+                ghosts[1].colorinit = MAGENTA;
+                level[y][x] = ' ';
+                break;
+            }
+            case 'I':
+            {
+                ghosts[2].yinit = y;
+                ghosts[2].xinit = x;
+                ghosts[2].colorinit = CYAN;
                 level[y][x] = ' ';
                 break;
             }
             case 'C':
             {
-                clyde.yinit = y;
-                clyde.xinit = x;
-                clyde.colorinit = YELLOW;
+                ghosts[3].yinit = y;
+                ghosts[3].xinit = x;
+                ghosts[3].colorinit = YELLOW;
                 level[y][x] = ' ';
                 break;
             }
             case '7':
             {
-                one.y = y;
-                one.x = x;
+                pellets[0].y = y;
+                pellets[0].x = x;
                 SetTextColor(WHITE);
                 level[y][x] = 'o';
                 player.left++;
@@ -110,8 +110,8 @@ void loadlevel()
             }
             case '8':
             {
-                two.y = y;
-                two.x = x;
+                pellets[1].y = y;
+                pellets[1].x = x;
                 SetTextColor(WHITE);
                 level[y][x] = 'o';
                 player.left++;
@@ -119,8 +119,8 @@ void loadlevel()
             }
             case '9':
             {
-                three.y = y;
-                three.x = x;
+                pellets[2].y = y;
+                pellets[2].x = x;
                 SetTextColor(WHITE);
                 level[y][x] = 'o';
                 player.left++;
@@ -128,8 +128,8 @@ void loadlevel()
             }
             case '0':
             {
-                four.y = y;
-                four.x = x;
+                pellets[3].y = y;
+                pellets[3].x = x;
                 SetTextColor(WHITE);
                 level[y][x] = 'o';
                 player.left++;
@@ -222,9 +222,5 @@ void gameover()
     SetTextColor(RED);
     cout << "GAME  OVER";
     Sleep(1000);
-    blinky.wait = 0;
-    pinky.wait = 0;
-    inky.wait = 0;
-    clyde.wait = 0;
     mainloop();
 }
