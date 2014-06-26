@@ -17,11 +17,11 @@ void moveghosts()
         }
         showall();
     }
-    if(player.left == 235 && ghosts[1].mode == 'w')
-        ghosts[INKY].mode = 'e';
-    if(player.left == 200 && ghosts[2].mode == 'w')
+    if(player.left == 235 && ghosts[PINKY].mode == 'w')
         ghosts[PINKY].mode = 'e';
-    if(player.left == 165 && ghosts[3].mode == 'w')
+    if(player.left == 200 && ghosts[INKY].mode == 'w')
+        ghosts[INKY].mode = 'e';
+    if(player.left == 165 && ghosts[CLYDE].mode == 'w')
         ghosts[CLYDE].mode = 'e';
     for(int i = 0; i < 4; i++)
        ghosts[i].move(player.y, player.x);
@@ -161,9 +161,9 @@ void initall()
     ghosts[BLINKY].mode = 'c';
     ghosts[BLINKY].modeold = 'c';
     if(player.left <= 235)
-        ghosts[INKY].mode = 'e';
-    if(player.left <= 200)
         ghosts[PINKY].mode = 'e';
+    if(player.left <= 200)
+        ghosts[INKY].mode = 'e';
     if(player.left <= 165)
         ghosts[CLYDE].mode = 'e';
 }
