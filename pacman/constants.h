@@ -38,4 +38,9 @@ const int RUNMAX    = 16;
 const int DEADMAX   = 3;
 const int MODEMAX   = 1000;
 
+// Ghost Names
+const int BLINKY = 0;
+const int INKY = 1;
+const int PINKY = 2;
+const int CLYDE = 3;
 #endif

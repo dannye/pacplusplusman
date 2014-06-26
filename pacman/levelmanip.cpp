@@ -68,34 +68,34 @@ void loadlevel()
             }
             case 'B':
             {
-                ghosts[0].yinit = y;
-                ghosts[0].xinit = x;
-                ghosts[0].colorinit = RED;
-                ghosts[0].diropp = 's';
+                ghosts[BLINKY].yinit = y;
+				ghosts[BLINKY].xinit = x;
+				ghosts[BLINKY].colorinit = RED;
+				ghosts[BLINKY].diropp = 's';
                 level[y][x] = ' ';
                 break;
             }
             case 'P':
             {
-                ghosts[1].yinit = y;
-                ghosts[1].xinit = x;
-                ghosts[1].colorinit = MAGENTA;
+                ghosts[INKY].yinit = y;
+                ghosts[INKY].xinit = x;
+                ghosts[INKY].colorinit = MAGENTA;
                 level[y][x] = ' ';
                 break;
             }
             case 'I':
             {
-                ghosts[2].yinit = y;
-                ghosts[2].xinit = x;
-                ghosts[2].colorinit = CYAN;
+                ghosts[PINKY].yinit = y;
+				ghosts[PINKY].xinit = x;
+				ghosts[PINKY].colorinit = CYAN;
                 level[y][x] = ' ';
                 break;
             }
             case 'C':
             {
-                ghosts[3].yinit = y;
-                ghosts[3].xinit = x;
-                ghosts[3].colorinit = YELLOW;
+                ghosts[CLYDE].yinit = y;
+				ghosts[CLYDE].xinit = x;
+				ghosts[CLYDE].colorinit = YELLOW;
                 level[y][x] = ' ';
                 break;
             }
