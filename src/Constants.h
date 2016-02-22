@@ -10,9 +10,11 @@ const char NO_COLLISION_TILES[3] = {' ','o','\xfa'};
 const int GATE_X = 13;
 const int GATE_Y = 12;
 
-// directions
-const char ALL_DIRS[4] = {'w','a','s','d'};
-const char ICONS[4]    = {'v','>','^','<'};
+// directions and icons
+const char ALL_DIRS[4]     = {'w','a','s','d'};
+const char ICONS[4]        = {'v','>','^','<'};
+const char GHOST_ICON      = 'M';
+const char DEAD_GHOST_ICON = '"';
 
 // colors
 const int WHITE     = FOREGROUND_RED   | FOREGROUND_GREEN | FOREGROUND_BLUE | FOREGROUND_INTENSITY;

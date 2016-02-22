@@ -79,6 +79,7 @@ void Ghost::Move(int playerY, int playerX) {
                 color = colorInit;
                 mode = 'e';
                 wait = GHOST_MAX;
+                icon = GHOST_ICON;
             }
             break;
         // if 'scattering'
@@ -273,12 +274,13 @@ void Ghost::Dead() {
     color = WHITE;
     modeOld = mode;
     mode = 'd';
+    icon = DEAD_GHOST_ICON;
 }
 
 void Ghost::Show() {
     SetTextColor(color);
     SetCursorPosition(y, x);
-    cout << 'M';
+    cout << icon;
 }
 
 void Ghost::Hide() {

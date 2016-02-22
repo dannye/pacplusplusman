@@ -421,6 +421,7 @@ void Game::InitAll() {
         ghosts[i]->SetColor(ghosts[i]->GetColorInit());
         ghosts[i]->SetMode('w');
         ghosts[i]->SetWait(0);
+        ghosts[i]->SetIcon(GHOST_ICON);
     }
     ghosts[BLINKY]->SetMode('c');
     ghosts[BLINKY]->SetModeOld('c');

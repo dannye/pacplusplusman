@@ -15,6 +15,7 @@ private:
     char dirOpp;
     char mode;
     char modeOld;
+    char icon;
 
     Game *game;
 
@@ -48,6 +49,7 @@ public:
     void SetDirOpp(char d)   { dirOpp = d;    }
     void SetMode(char m)     { mode = m;      }
     void SetModeOld(char m)  { modeOld = m;   }
+    void SetIcon(char i)     { icon = i;      }
 };
 
 #endif
