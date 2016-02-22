@@ -1,7 +1,12 @@
-#include "includes.h"
+#include <Windows.h>
 
-void SetWindowSize(int height, int width)
-{
+#include "Constants.h"
+
+void SetWindowTitle(char title[]) {
+    SetConsoleTitle(title);
+}
+
+void SetWindowSize(int height, int width) {
     SMALL_RECT window;
     window.Top = 0;
     window.Left = 0;
@@ -12,28 +17,24 @@ void SetWindowSize(int height, int width)
     SetConsoleScreenBufferSize(GetStdHandle(STD_OUTPUT_HANDLE), buffer);
 }
 
-void SetCursorVisibility(bool show)
-{
+void SetCursorVisibility(bool show) {
     CONSOLE_CURSOR_INFO cursor;
     GetConsoleCursorInfo(GetStdHandle(STD_OUTPUT_HANDLE), &cursor);
     cursor.bVisible = show;
     SetConsoleCursorInfo(GetStdHandle(STD_OUTPUT_HANDLE), &cursor);
 }
 
-void SetCursorPosition(int y, int x)
-{
+void SetCursorPosition(int y, int x) {
     COORD cursor = {x,y+3};
     SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), cursor);
 }
 
-void SetTextColor(int color)
-{
+void SetTextColor(int color) {
     SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), color);
 }
 
-void SetScreenColor(int color)
-{
+void SetScreenColor(int color) {
     COORD coord = {0,3};
     DWORD dwWritten;
-    FillConsoleOutputAttribute(GetStdHandle(STD_OUTPUT_HANDLE), color, LEVELHEIGHT * LEVELWIDTH, coord, &dwWritten);
+    FillConsoleOutputAttribute(GetStdHandle(STD_OUTPUT_HANDLE), color, LEVEL_HEIGHT * LEVEL_WIDTH, coord, &dwWritten);
 }
