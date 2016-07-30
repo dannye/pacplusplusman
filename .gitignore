@@ -6,10 +6,12 @@
 
 # Program Debug Databases
 *.pdb
+*.ipdb
 
 # SQL Database Files
 *.sdf
 *.opensdf
+*.db
 *.opendb
 
 # Visual Studio Solution User Options
@@ -20,6 +22,7 @@
 
 # Object Files
 *.obj
+*.iobj
 
 # Log Files
 *.log
